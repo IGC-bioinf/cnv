@@ -1,0 +1,2 @@
+#!/bin/bash
+samtools sort -@ 40 whole_bel.bam > whole_bel_sorted.bam && samtools index -@ 40 whole_bel_sorted.bam && /usr/lib/jvm/java-8-openjdk-amd64/jre/bin/java -jar /storage/analysis/progs/gatk-4.1.1.0/gatk-package-4.1.1.0-local.jar HaplotypeCaller --native-pair-hmm-threads 20 -R /storage/analysis/Databases/Ref/GRCh37_only_chr.fna -I whole_bel.bam -O whole_bel_unfilt.vcf --tmp-dir /storage/analysis/exome_trios/tmp

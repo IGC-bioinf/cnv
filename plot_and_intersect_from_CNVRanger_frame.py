@@ -1,6 +1,6 @@
 import pandas as pd
 import sys
-file = '/home/roma/cnv/proj_cnv/done/regions_without_test_abr.csv' ############################# INPUTFILE
+file = sys.argv[0] ############################# INPUTFILE
 df = pd.read_csv(file)
 df = df.sort_values(by='MinPvalue')
 
